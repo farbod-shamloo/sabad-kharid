@@ -1,0 +1,325 @@
+@import url(reset.css);
+
+@import url(reset.css);
+
+@font-face {
+    font-family: vazirNormal;
+    src: url('../fonts/vazir.eot');
+    src: url('../fonts/vazir.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir.woff2') format('woff2'), url('../fonts/vazir.woff') format('woff'), url('../fonts/vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: vazirBold;
+    src: url('../fonts/vazir-bold.eot');
+    src: url('../fonts/vazir-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/vazir-bold.woff2') format('woff2'), url('../fonts/vazir-bold.woff') format('woff'), url('../fonts/vazir-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+
+body , button{
+    font-family: vazirNormal;
+    direction: rtl;
+    
+   
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+#header{
+    background: linear-gradient(90deg, rgba(201,179,64,1) 0%, rgba(0,255,239,1) 100%);
+    height: 600px;
+}
+
+#header #header-section{
+    display: flex;
+}
+
+#header #header-section .text{
+    align-self: center;
+}
+
+#header #header-section .img img{
+  width: 450px;  
+  position: relative;
+  top: 20px;
+} 
+
+#header #header-section .text .title{
+   font-family: vazirBold;
+   font-size: 30px;
+   line-height: 40px;
+}
+#header #header-section .desc{
+    color: #3b3b3b;
+    padding: 15px 0 15px 15px;
+    line-height: 23px;
+    text-align: justify;
+}
+.btn{
+    background-color:rgba(255, 114, 39, 1);
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-family: vazirNormal;
+    font-size: 20px;
+    border: none;
+    margin-top: 10px;
+}
+.btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/* product */
+
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#products .product-item{
+    flex-basis: 280px;
+    border: 1px solid #e0e0e0;
+    margin-top: 25px;
+    border-radius: 5px;
+}
+#products .product-item .product-img img{
+    width: 100%;
+    height: 250px;
+    padding: 10px;
+}
+
+#products .product-item .product-title{
+    font-family: vazirBold;
+    padding: 10px;
+    height: 50px;
+    font-size: 15px;
+    line-height: 25px;
+}
+#products .product-item .product-instock{
+    color: red;
+    font-size: 13px;
+    padding: 0 10px 10px 0;
+
+}
+
+#products .product-item .product-data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 15px;
+}
+svg{
+    cursor: pointer;
+}
+#footer{
+    background-color: #3b3b3b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* cart */
+.cart{
+    background-color: #d8d8d8;
+    width: 320px;
+    height: 400px;
+    position: fixed;
+    left: 20px;
+    bottom: -363px;
+    border-radius: 5px;
+    
+}
+.cart .cart-header{
+    background-color: #388e3c;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+}
+.cart-item{
+    height: 300px;
+    overflow-x: auto;
+}
+.cart-li{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 14px;
+}
+.cart .cart-li .p-name:hover{
+    background-color: red;
+    cursor: pointer;
+}
+.total{
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid #3b3b3b;
+    font-size: 16px;
+}
+.cart .cart-item .plus{
+    color: #fff;
+    background-color: green;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    text-align: center;
+}
+.cart .cart-item .min{
+    color: #fff;
+    background-color: red;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    text-align: center;
+}
+.ul{
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    
+}
+.ul .li{
+    display: inline-block;
+    margin: 15px 20px;
+    position: relative;
+ }
+ .ul .li::after{
+     content: '';
+     height: 3px;
+     width: 0;
+     background: orange;
+     position: absolute;
+     left: 0;
+     bottom: -10px;
+     transition: 0.5s;
+ }
+ .ul .li:hover::after{
+     width: 100%;
+ }
+ .ul .li a{
+     color: #000;
+     font-size: 20px;   
+     text-decoration: none;
+     text-transform: uppercase;
+     transition: 0.1s;
+ }
+
+ .darkmode{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 30px;
+ }
+
+ .dark {
+    color: white;
+    background: #444;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background: linear-gradient(90deg, rgba(152,201,64,1) 41%, rgba(0,255,132,1) 100%);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+  } 
+  .form{
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   
+  } 
+  .form-con{
+    display: flex;
+    flex-direction: column;
+     margin-top: 15px;
+     
+     
+  }
+  .form-con input{
+    margin-top: 20px;
+    padding: 10px;
+    width: 80%;
+    margin-right: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: lightgray;
+  }
+  .bttn{
+    padding: 10px;
+    margin-top: 20px;
+    width: 80%;
+    margin-right: 40px;
+    border: none;
+    background-color: #388e3c;
+    border-radius: 5px;
+  }
+  .bttn:hover{
+    background-color: #57a15b;
+  }
+  .both{
+    position: relative;
+    top: 100px;
+  }
+  .h11{
+    text-align: center;
+    font-size: 25px;
+    font-family: vazirBold;
+    position: relative;
+    top: 60px;
+  }
+  
+
+
+
+ 
